@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dkd22wnkbdwrf"]
+[gd_scene load_steps=16 format=3 uid="uid://dkd22wnkbdwrf"]
 
 [ext_resource type="Script" path="res://scripts/gamemanager.gd" id="1_7e0yl"]
 [ext_resource type="PackedScene" uid="uid://bigxhqhn6041u" path="res://scenes/player.tscn" id="1_vgx5p"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bjuag55p2cfbu" path="res://scenes/killzone.tscn" id="5_c3grm"]
 [ext_resource type="PackedScene" uid="uid://c66ox0jr27uf6" path="res://scenes/slime.tscn" id="6_sy2nx"]
 [ext_resource type="FontFile" uid="uid://cgktyy0jurms0" path="res://assets/fonts/PixelOperator8.ttf" id="8_q0erh"]
+[ext_resource type="PackedScene" uid="uid://clk6ktwihee3f" path="res://scenes/frog_player.tscn" id="9_djwab"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o7b2l"]
 texture = ExtResource("2_6yqy1")
@@ -464,6 +465,7 @@ theme_override_font_sizes/font_size = 8
 text = "You collected x coins"
 
 [node name="Player" parent="." instance=ExtResource("1_vgx5p")]
+visible = false
 position = Vector2(56, 73)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
@@ -514,3 +516,6 @@ offset_bottom = 40.0
 theme_override_fonts/font = ExtResource("8_q0erh")
 theme_override_font_sizes/font_size = 8
 text = "Space to jump"
+
+[node name="Player2" parent="." instance=ExtResource("9_djwab")]
+position = Vector2(73, 74)

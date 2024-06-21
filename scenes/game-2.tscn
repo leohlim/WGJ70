@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/gamemanager.gd" id="1_8jc8p"]
 [ext_resource type="FontFile" uid="uid://cgktyy0jurms0" path="res://assets/fonts/PixelOperator8.ttf" id="2_cpwun"]
-[ext_resource type="PackedScene" uid="uid://bigxhqhn6041u" path="res://scenes/player.tscn" id="3_dbhoj"]
+[ext_resource type="PackedScene" uid="uid://clk6ktwihee3f" path="res://scenes/frog_player.tscn" id="3_iqcvy"]
 [ext_resource type="Texture2D" uid="uid://cxadfmn2hru7i" path="res://assets/sprites/world_tileset.png" id="4_4juje"]
 [ext_resource type="PackedScene" uid="uid://bdypakmpa3bck" path="res://scenes/platform.tscn" id="5_0rhrq"]
 [ext_resource type="PackedScene" uid="uid://00l7ki82nvx5" path="res://scenes/coin.tscn" id="6_0ijj8"]
@@ -463,11 +463,13 @@ theme_override_fonts/font = ExtResource("2_cpwun")
 theme_override_font_sizes/font_size = 8
 text = "You collected x coins"
 
-[node name="Player" parent="." instance=ExtResource("3_dbhoj")]
-position = Vector2(72, -210)
+[node name="Player" parent="." instance=ExtResource("3_iqcvy")]
+z_index = 5
+position = Vector2(73, -64)
+collision_layer = 2
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
-position = Vector2(-2, -18)
+position = Vector2(1, -6)
 offset = Vector2(2.08165e-12, 2.08165e-12)
 zoom = Vector2(4, 4)
 limit_bottom = 160
